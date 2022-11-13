@@ -36,7 +36,7 @@ dockerImage.push()
 }
 stage('Deploy image') {
 steps{
-bat "docker run -d -p 8089:80 $registry:$BUILD_NUMBER"
+bat "docker run -d -p 80$BUILD_NUMBER:80 $registry:$BUILD_NUMBER"
 }
 }
 }
